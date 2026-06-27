@@ -83,24 +83,7 @@ export default function Footer() {
                   Promo &amp; Diskon
                 </Link>
               </li>
-              <li>
-                <Link href="/tentang-kami" className="text-white/70 font-label-md text-label-md hover:text-white transition-colors flex items-center gap-2 group">
-                  <span className="material-symbols-outlined text-base opacity-50 group-hover:opacity-100">info</span>
-                  Tentang Kami
-                </Link>
-              </li>
-              <li>
-                <Link href="/syarat-ketentuan" className="text-white/70 font-label-md text-label-md hover:text-white transition-colors flex items-center gap-2 group">
-                  <span className="material-symbols-outlined text-base opacity-50 group-hover:opacity-100">gavel</span>
-                  Syarat &amp; Ketentuan
-                </Link>
-              </li>
-              <li>
-                <Link href="/kebijakan-privasi" className="text-white/70 font-label-md text-label-md hover:text-white transition-colors flex items-center gap-2 group">
-                  <span className="material-symbols-outlined text-base opacity-50 group-hover:opacity-100">shield</span>
-                  Kebijakan Privasi
-                </Link>
-              </li>
+
             </ul>
           </div>
 
