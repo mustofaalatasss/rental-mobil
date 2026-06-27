@@ -1,26 +1,154 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #00193c;
+  --color-on-background: #191c1d;
+  --color-on-secondary-fixed-variant: #464747;
+  --color-on-tertiary-fixed-variant: #930010;
+  --color-on-error-container: #93000a;
+  --color-on-tertiary-fixed: #410003;
+  --color-inverse-on-surface: #f0f1f2;
+  --color-surface-container-highest: #e1e3e4;
+  --color-tertiary-fixed-dim: #ffb3ac;
+  --color-on-error: #ffffff;
+  --color-surface-dim: #d9dadb;
+  --color-on-tertiary-container: #ff6159;
+  --color-on-secondary: #ffffff;
+  --color-outline-variant: #c4c6d1;
+  --color-on-secondary-fixed: #1a1c1c;
+  --color-tertiary-fixed: #ffdad6;
+  --color-outline: #747781;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container-high: #e7e8e9;
+  --color-on-primary-container: #7796d1;
+  --color-surface-container-lowest: #ffffff;
+  --color-primary-container: #002d62;
+  --color-surface-container-low: #f3f4f5;
+  --color-on-primary-fixed: #001b3f;
+  --color-secondary-fixed-dim: #c6c6c6;
+  --color-error-container: #ffdad6;
+  --color-surface-bright: #f8f9fa;
+  --color-inverse-surface: #2e3132;
+  --color-tertiary: #3e0003;
+  --color-primary-fixed-dim: #abc7ff;
+  --color-secondary-container: #e0dfdf;
+  --color-surface: #f8f9fa;
+  --color-on-surface: #191c1d;
+  --color-secondary-fixed: #e3e2e2;
+  --color-error: #ba1a1a;
+  --color-surface-variant: #e1e3e4;
+  --color-surface-container: #edeeef;
+  --color-background: #f8f9fa;
+  --color-on-primary-fixed-variant: #24467c;
+  --color-on-surface-variant: #43474f;
+  --color-tertiary-container: #650007;
+  --color-on-secondary-container: #626363;
+  --color-inverse-primary: #abc7ff;
+  --color-primary-fixed: #d7e2ff;
+  --color-secondary: #5d5e5f;
+  --color-on-primary: #ffffff;
+  --color-surface-tint: #3e5e95;
+
+  --spacing-margin-desktop: 48px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 16px;
+  --spacing-base: 8px;
+  --spacing-container-max: 1280px;
+
+  --font-montserrat: var(--font-montserrat);
+  --font-inter: var(--font-inter);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@utility font-body-lg {
+  font-family: var(--font-inter);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+@utility font-body-md {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+@utility font-headline-lg-mobile {
+  font-family: var(--font-montserrat);
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+@utility font-headline-xl {
+  font-family: var(--font-montserrat);
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+@utility font-headline-lg {
+  font-family: var(--font-montserrat);
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+}
+@utility font-headline-md {
+  font-family: var(--font-montserrat);
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 700;
+}
+@utility font-label-md {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+@utility font-label-sm {
+  font-family: var(--font-inter);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base and Custom Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.glass-card-strong {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 25, 60, 0.1);
+}
+
+.hero-gradient {
+  background: linear-gradient(to right, rgba(0, 25, 60, 0.9), rgba(0, 25, 60, 0.4));
+}
+
+.floating-whatsapp {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
