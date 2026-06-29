@@ -17,7 +17,7 @@ export default async function Home() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <div
-              className="w-full h-full bg-cover bg-center"
+              className="w-full h-full bg-cover bg-[75%_center] lg:bg-center"
               style={{
                 backgroundImage: 'url("/hero-bg.png")',
               }}
