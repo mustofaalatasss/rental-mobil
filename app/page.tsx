@@ -13,7 +13,7 @@ export default async function Home() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] lg:h-[90vh] w-full flex flex-col justify-center pt-28 pb-8 lg:pt-0 lg:pb-0">
+        <section className="relative min-h-[100svh] lg:min-h-[90vh] lg:h-[90vh] w-full flex flex-col justify-start lg:justify-center pt-28 lg:pt-0 lg:pb-0">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <div
@@ -24,12 +24,12 @@ export default async function Home() {
             ></div>
             <div className="absolute inset-0 hero-gradient"></div>
           </div>
-          <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex-1 flex flex-col justify-center mb-8 lg:mb-0 lg:block lg:flex-none">
+          <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop flex-1 flex flex-col justify-center lg:justify-center mb-8 mt-4 lg:mb-0 lg:mt-0 lg:block lg:flex-none">
             <div className="max-w-3xl lg:-mt-16">
-              <h1 className="font-headline-xl text-headline-xl text-white mb-8 drop-shadow-2xl">
+              <h1 className="font-headline-xl text-headline-xl text-white mb-6 lg:mb-8 drop-shadow-2xl">
                 Sewa Mobil Premium Jakarta Aman & Cepat
               </h1>
-              <p className="text-white font-body-lg text-body-lg mb-14 max-w-xl opacity-90 leading-relaxed">
+              <p className="text-white font-body-lg text-body-lg mb-8 lg:mb-14 max-w-xl opacity-90 leading-relaxed">
                 Nikmati pengalaman berkendara kelas dunia dengan armada terbaru kami. Layanan profesional untuk kebutuhan bisnis dan personal Anda di Ibukota.
               </p>
             </div>
